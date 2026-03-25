@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bobby Gaza</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f5f1eb;
+    --border: #ddd;
+    --text: #2a2520;
+    --muted: #9a948e;
+    --accent: #7a6a58;
+    --accent-dim: #a89a8a;
+    --white: #1a1510;
+    --body-dim: #5a524a;
+    --bullet-dim: #8a7a6a;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 80px 48px 120px;
+  }
+
+  /* ── Header ── */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+
+  header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  address {
+    font-style: normal;
+    text-align: right;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 2.1;
+    flex-shrink: 0;
+    padding-top: 6px;
+  }
+
+  address a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  /* ── Tagline & Summary ── */
+  .tagline {
+    margin-top: 32px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .summary {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text);
+    max-width: 680px;
+  }
+
+  /* ── Sections ── */
+  section {
+    margin-bottom: 64px;
+  }
+
+  section > h2 {
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  /* ── Roles ── */
+  article {
+    padding: 28px 0;
+  }
+
+  article h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    color: var(--white);
+    font-weight: 400;
+    display: inline;
+  }
+
+  article .period {
+    float: right;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    padding-top: 4px;
+  }
+
+  article .title {
+    display: block;
+    font-size: 13px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-top: 4px;
+    clear: right;
+  }
+
+  article p {
+    margin-top: 14px;
+    font-size: 15px;
+    /**color: var(--body-dim);*/
+    line-height: 1.75;
+  }
+
+  article p strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  article ul {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  article ul li {
+    font-size: 15px;
+    color: var(--bullet-dim);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  article ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-dim);
+    font-size: 12px;
+  }
+
+  /* ── Earlier ── */
+  .earlier-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .earlier-grid dt {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 500;
+    padding: 18px 0 2px;
+    border-top: 1px solid var(--border);
+    padding-right: 24px;
+  }
+
+  .earlier-grid dd {
+    font-size: 14px;
+    color: var(--muted);
+    padding-bottom: 16px;
+    padding-right: 24px;
+    border-top: 1px solid var(--border);
+    line-height: 1.5;
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Bobby<br><em>Gaza</em></h1>
+    <address>
+      bobby@symlinked.com<br>
+      (925) 381-2716<br>
+      Oakland, California<br>
+      <a href="https://linkedin.com/in/bobbygaza">linkedin.com/in/bobbygaza</a>
+    </address>
+  </header>
+
+  <p class="tagline">Technology &nbsp;·&nbsp; Culture &nbsp;·&nbsp; Connection</p>
+  <br>
+  <p class="summary">
+    Twenty years building products at the intersection of technology, music and culture — from the earliest days of digital music at Napster, Listen.com, and MP3.com, through the streaming era at Beats Music, Apple, UnitedMasters, and SoundCloud. I've led engineering and product behind some of the most influential music platforms ever built.
+  </p><br><br>
+
+  <section>
+
+    <h2>Experience</h2>
+
+    <article>
+      <span class="period">2023 — Present</span>
+      <h3>Kapwa</h3>
+      <span class="title">Principal &amp; Founder</span>
+      <p>Strategic technology consulting practice working with select companies on platform modernization, engineering leadership, and AI integration. Current engagements include acting CTO roles at GreatSchools.org, and senior engineering and BD leadership for SPAN Digital across Apple, SoundCloud, and Early Warning Systems (Zelle).</p>
+    </article>
+
+    <article>
+      <span class="period">2022 — 2023</span>
+      <h3>SoundCloud</h3>
+      <span class="title">SVP of Engineering</span>
+      <p>Led user-facing engineering for a platform built around <strong>40M+ creators</strong> and the intimate, vulnerable act of sharing original work with the world. Restructured teams across Berlin, Atlanta, LA, and New York around product ownership and mission. Drove engineering that contributed to SoundCloud's <strong>first-ever profitability</strong> ($2.2M positive EBITDA, reversing a $31M loss).</p>
+      <ul>
+        <li>Launched Fan-Powered Royalties expansion with Warner Music Group — changing how artists get paid based on who actually listens</li>
+        <li>Shipped direct messaging platform for 50,000+ creators — making the platform feel human again</li>
+      </ul>
+    </article>
+
+    <article>
+      <span class="period">2018 — 2022</span>
+      <h3>UnitedMasters</h3>
+      <span class="title">CTO</span>
+      <p>Built the technology platform for Steve Stoute's vision of independent artist ownership from Series A through Series C ($550M valuation). Scaled from near-zero to <strong>1M+ independent artists</strong> and 5+ billion streams. This wasn't just a music platform — it was an economic and cultural argument about who gets to own their relationship with their audience.</p>
+      <ul>
+        <li>Built and launched SELECT subscription platform transforming the business from revenue-sharing to premium tiers</li>
+        <li>Architected industry-first direct distribution integrations with TikTok, NBA, and Coinbase</li>
+        <li>Led technology through Apple-led Series B ($50M) and Series C — built the story, ran the diligence</li>
+      </ul>
+    </article>
+
+    <article>
+      <span class="period">2017 — 2018</span>
+      <h3>Pandora</h3>
+      <span class="title">VP of Engineering</span>
+      <p>Led 500+ engineers across Content, Payments, Personalization, Ads, Data Science, and Mobile during the launch of Pandora Premium — the company's first on-demand streaming service, reaching 1M subscribers within months. Positioned the platform for SiriusXM acquisition.</p>
+    </article>
+
+    <article>
+      <span class="period">2015 — 2017</span>
+      <h3>Dwell</h3>
+      <span class="title">CTO</span>
+      <p>Recruited by Dave Morin to lead the digital transformation of an iconic design brand from print magazine to technology-driven subscription platform. Built the product, team, and infrastructure from scratch — translating a high-design editorial identity into a digital experience that didn't betray it. Hired and led a 20-person product, design, and engineering team.</p>
+    </article>
+
+    <article>
+      <span class="period">2013 — 2015</span>
+      <h3>Beats Music → Apple</h3>
+      <span class="title">SVP Engineering → Sr Engineering Manager</span>
+      <p>Joined Beats Music early and led engineering from startup through <strong>$3B acquisition by Apple</strong> — one of the largest acquisitions in Apple's history. Built the team from under 10 to 110 engineers. Beats wasn't just a streaming service — it was a bet that human curation and emotional context mattered more than pure algorithms, at a time when nobody else believed that. That idea became Apple Music.</p>
+      <ul>
+        <li>Built "Just For You" — a personalized listening experience designed around a single metric: did you hit play in under 30 seconds? Every major platform copied it.</li>
+        <li>Architected "The Sentence" — a contextual recommendation engine that understood mood, moment, and social context</li>
+        <li>Led technical due diligence and integration planning for the Apple acquisition</li>
+        <li>Transitioned entire 110-person engineering team to Apple; technology and team became the foundation for Apple Music's launch</li>
+      </ul>
+    </article>
+
+  </section>
+
+  <section>
+    <h2>Earlier</h2>
+    <dl class="earlier-grid">
+      <dt>ThisMoment</dt>
+      <dd>VP Engineering, 2008–2013 · First engineering hire; built real-time social marketing platform for Google, Disney, Salesforce, Coca-Cola, Levi's, Sony</dd>
+      <dt>Yahoo!</dt>
+      <dd>Sr Engineering Manager, 2007–2008 · Led engineering for UGC-focused Worlds platform and Yahoo Autos</dd>
+      <dt>CNET Networks</dt>
+      <dd>Director of Engineering, 2004–2007 · Led relaunch of MP3.com; engineering lead for GameSpot, TV.com, FilmSpot</dd>
+      <dt>Listen.com / Napster</dt>
+      <dd>Sr Systems Engineer, 1998–2001 · Early infrastructure for two of music's most consequential digital platforms</dd>
+    </dl>
+  </section>
+
+  <footer>
+    <span>bobby@symlinked.com</span>
+    <a href="https://linkedin.com/in/bobbygaza">linkedin.com/in/bobbygaza</a>
+  </footer>
+
+</body>
+</html>
